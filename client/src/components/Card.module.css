@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Outfit:wght@300;500&family=Work+Sans:wght@300;400&display=swap');
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+  
+  display: grid;
+  max-width: 1200px;
+  width: 500px;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+  /*
+    */
+  }
+
+
+  
+.card {
+  display: grid;
+  background-color: #4d4d4b;
+  border-radius: 0.5rem;
+  width: auto;
+  height: 80vh;
+  max-width: 25rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  
+ 
+}
+
+
+.card:hover {
+  transform: scale(0.9); 
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.1),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.1);
+ 
+
+  background-color: #261F11;
+  
+}
+
+.image {
+  background-size: cover;
+  width: 400px;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+
+
+p {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  color: white;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase ;
+
+}
+
+.dietas {
+ 
+  color: white;
+  height: 25px;
+  border-radius: 5px;
+  padding: 0.5px ;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  
+}
+
+.letras {
+  padding: 0px 10% 0px 10%;
+  font-family: 'Lato', sans-serif;
+  color: rgb(89, 220, 89);
+}

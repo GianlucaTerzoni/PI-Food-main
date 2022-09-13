@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Outfit:wght@300;500&family=Work+Sans:wght@300;400&display=swap');
+
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+
+}
+.fondo {
+    background:url(./image/imagen4.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+ 
+    
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'Lato', sans-serif;
+}
+
+h3{
+    color: white;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.box {
+    width: 55vh;
+    height: 8vh;
+    margin-top: 8vh;
+    transition: 0.5s linear;
+    font-size: 30px;
+    text-align: center;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s linear;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.box:hover{
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,41 @@
+.flexi {
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+select {
+  margin: 1rem;
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  background-color: #5b5959;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+  
+}
+.input {
+  width: 130px;
+  
+}
+
+
+
+
+
+.tipo {
+  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+  margin: 1rem;
+  
+
+  
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Outfit:wght@300;500&family=Work+Sans:wght@300;400&display=swap');
+
+
+.fondo {
+    background: url(./image/imagen2.jpg)no-repeat center center/cover;
+    position: absolute;
+    align-content: center;
+    width: 70%;
+    height: auto;
+    top: 10px;
+    right: 0;
+    left: 10%;
+    bottom: 0;
+    margin-left: 2rem;
+    border-radius: 20px;
+}
+
+.detail{
+    font-size: 30px;
+    color: green;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+
+
+
+
+p{
+    font-size: 20px;
+    color: black;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+.score{
+font-size: 35px; 
+color:green;
+}
+
+.infoContainer{
+    margin: 0;
+    padding-top: 0;
+    height: 100%;
+    
+
+}
+ /*
+    display: inline-flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+    
+*/
+
+
+.summaryContainer{
+
+    width: 100%;
+    height: 50%;
+
+  
+}
+
+
+
+
+
+.stepsContainer{
+    margin: 2rem;
+    padding-top: 10rem; 
+
+}
+
+.stepsContainer p {
+    margin: 1rem;
+    padding-top: 2rem; 
+    height: 100%;
+
+}
+    /*
+    width: 45%;
+    background-color: rgba(185, 218, 245, 0.8);
+    margin-right: 1em;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(-225deg, silver 0%, snow 100%);
+
+*/
+
+.h3title{
+  
+font-size: 70px; 
+text-align:center;
+color: green;
+padding :0;
+margin:5px 0px 10px 10px;
+}
+
+.box {
+    width: 25vh;
+    height: 5vh;
+    margin-top: 1.2vh;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    background: white;
+    /* border-color: red; */
+    transition: 0.19s linear;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-top: 8rem;
+}
+.box:hover {
+    color: white;
+    background-color: red;
+
+}
+
+
+
+
+.title {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    color: green;
+    text-decoration: underline;
+    font-family: 'Lato', sans-serif;
+}
+
+.imageContainer{
+    filter: saturate(180%);
+}
+.img {
+    width: 350px;
+    border-radius:20px;
+}
+
+.pInfo{
+font-size: 20px; 
+padding :0;
+margin:5px 10px 20px 20px;
+}
+
+h4{
+   
+    font-size: 70px;
+}
+
