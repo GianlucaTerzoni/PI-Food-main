@@ -6,7 +6,7 @@ const router = Router();
 
 router.get("/", async (req, res, next) => {
   try {
-    const name = req.query.name;
+    const name = req.query.name; 
     const total = await getTotal();
 
     if (name) {
@@ -51,7 +51,7 @@ router.post("/create", async (req, res) => {
       image,
       diets,
       summary,
-      health_score,
+      health_score,  
       dishtypes,
       step_by_step,
     } = req.body;
@@ -79,8 +79,6 @@ router.post("/create", async (req, res) => {
     res.send(error);
   }
 });
-
-
 
 
 module.exports = router;

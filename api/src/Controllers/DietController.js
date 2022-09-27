@@ -6,15 +6,15 @@ const { API_KEY1, API_KEY2, API_KEY3, API_KEY4, API_KEY5, API_KEY6 } =
 
 const getAllDiet = async () => {
   try {
-    let diet = await axios.get(
+    const  diet = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY1}&addRecipeInformation=true&number=100`
     );
 
-    let types = await diet.data.results.map((e) => e.diets);
+    let types = await diet.data.results.map((e) => e.diets); 
 
-    let another = types.flat(); 
+    const  another = types.flat(); 
 
-    let typeDiet = [
+    const typeDiet = [ 
       ...new Set(another),
       "vegetarian",
       "lacto vegetarian",
