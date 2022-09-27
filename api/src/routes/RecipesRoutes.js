@@ -80,27 +80,6 @@ router.post("/create", async (req, res) => {
   }
 });
 
-/*
-
-router.delete("/delete/:id", async (req, res) => {
-  try {
-    const id = req.params.id;
-
-    await Recipe.destroy({
-      where: {
-        id: id,
-      },
-    });
-    res.send("Receta eliminada");
-  } catch (error) {
-    res.send(error);
-  }
-});
-*/
-
-
-
-
 
 
 
