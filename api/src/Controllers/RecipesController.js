@@ -31,22 +31,27 @@ const getApiInfo = async () => {
     return apiInfo;
   } catch (error) {
     console.log("Error en getApiInfo!");
-    res.send(error);
+    alert(error);
   }
 };
 
 const getDbInfo = async () => {
-  const db = await Recipe.findAll({  
-    include: {
-      model: Diet,
-      attributes: ["name"],
-      through: {
-        attributes: [],
+  try {
+    const db = await Recipe.findAll({
+      include: {
+        model: Diet,
+        attributes: ["name"],
+        through: {
+          attributes: [],
+        },
       },
-    },
-  });
-  // console.log(db);
-  return db;
+    });
+    // console.log(db);
+    return db;
+  } catch (error) {
+    console.log("Error en getDbInfo!");
+    alert(error);
+  }
 };
 
 const getTotal = async () => {
@@ -59,7 +64,7 @@ const getTotal = async () => {
     return all;
   } catch (error) {
     console.log("error en concatenacion/getTotal");
-    console.log(error);
+    alert(error);
   }
 };
 
