@@ -13,10 +13,11 @@ export const FILTER_BY_NAME = "FILTER_BY_NAME";
 export const CLEAN_DETAIL = "CLEAN_DETAIL";
 
 
+
 export function getRecipes() {
   return async (dispatch) => {
       try {
-          let json = await axios.get('http://localhost:3001/recipes');
+          let json = await axios.get('http://localhost:3001/recipes'); //conecto el back con el front
           return dispatch({
               type: GET_RECIPE,
               payload: json.data,
@@ -134,3 +135,5 @@ export function postRecipe (payload) {
         }
   }
 }
+
+

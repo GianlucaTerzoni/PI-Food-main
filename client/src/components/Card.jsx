@@ -24,6 +24,8 @@ export default function Card ({ id, name, image, diets }) {
                         />
                         <p className={style.letras}>{name.toUpperCase()}</p>
                         
+                        
+                        
                     </div>
                 </NavLink>
                 <div>
@@ -38,6 +40,8 @@ export default function Card ({ id, name, image, diets }) {
                         );
                     })}
                 </div>
+
+
             </div>
             </div>
        

@@ -11,6 +11,7 @@ import {
   GET_RECIPE,
   POST_RECIPE,
   CLEAN_DETAIL,
+  CLEAN_DISH,
 } from "../actions/index";
 
 const initialState = {
@@ -18,6 +19,7 @@ const initialState = {
   allrecipes: [],
   diets: [],
   details: [],
+  dishtypes: []
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -143,7 +145,8 @@ export default function rootReducer(state = initialState, action) {
             }
         }              
 
-
+    
+            
     default:
       return { ...state };
   }

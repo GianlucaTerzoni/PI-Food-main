@@ -16,7 +16,7 @@ router.get("/", async (req, res, next) => {
 
       nameRecipe.length
         ? res.status(200).send(nameRecipe)
-        : res.status(404).send("error en name.query");
+        : res.status(404).send("recipe not found");
     } else {
       return res.status(200).send(total);
     }
@@ -30,7 +30,7 @@ router.get("/:id", async (req, res, next) => {
     const id = req.params.id;
     const all = await getTotal();
 
-    if (id) {
+    if (id) { 
       const filter = all.filter((e) => e.id == id);
 
       filter.length
@@ -56,9 +56,7 @@ router.post("/create", async (req, res) => {
       step_by_step,
     } = req.body;
     console.log(req.body);
-    
-   
-    
+
     const newRecipe = await Recipe.create({
       name,
       image,
@@ -70,17 +68,40 @@ router.post("/create", async (req, res) => {
     // console.log(newRecipe);
     diets.forEach(async (element) => {
       let newdiet = await Diet.findOne({
-          where: {
-              name: element 
-          }
-      })
-      await newRecipe.addDiet(newdiet);                     
-  });
-  res.send('New Recipe created succesfully!');             
-} catch (error) {
-   res.send(error);
-}
-
+        where: {
+          name: element,
+        },
+      });
+      await newRecipe.addDiet(newdiet);
+    });
+    res.send("New Recipe created succesfully!");
+  } catch (error) {
+    res.send(error);
+  }
 });
+
+/*
+
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+
+    await Recipe.destroy({
+      where: {
+        id: id,
+      },
+    });
+    res.send("Receta eliminada");
+  } catch (error) {
+    res.send(error);
+  }
+});
+*/
+
+
+
+
+
+
 
 module.exports = router;

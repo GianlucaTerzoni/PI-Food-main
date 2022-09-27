@@ -6,6 +6,7 @@ import {
   FilterAZ,
   FilterMaxScore,
   FilterCreated,
+
 } from "../actions";
 import SearchBar from "./SearchBar";
 import style from './Filters.module.css'
@@ -13,6 +14,7 @@ import style from './Filters.module.css'
 export default function Filters({ setCurrentPage, setOrder }) {
   const dispatch = useDispatch();
   const dieta = useSelector((state) => state.diets);
+
 
   useEffect(() => {
     dispatch(getDiets());
@@ -42,6 +44,8 @@ export default function Filters({ setCurrentPage, setOrder }) {
     dispatch(FilterCreated(e.target.value));
     setCurrentPage(1);
   }
+
+
 
   return (
     <div className={style.flexi}>
@@ -88,6 +92,7 @@ export default function Filters({ setCurrentPage, setOrder }) {
           <option value="min">Min</option>
         </select>
       </div>
+
     </div>
   );
 }

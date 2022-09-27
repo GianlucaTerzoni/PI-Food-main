@@ -6,7 +6,7 @@ import Card from "./Card";
 import Paginado from "./Paginado";
 import Filters from "./Filters";
 import NavBar from "./NavBar";
-import style from './Home.module.css'
+import style from "./Home.module.css";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -25,59 +25,54 @@ export default function Home() {
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-  function handleResert(e){
-    e.preventDefault()
-    dispatch(cleanRecipe(dispatch))
-    dispatch(getRecipes())
-    window.location.reload()
+
+
+  function handleResert(e) {
+    e.preventDefault();
+    dispatch(cleanRecipe(dispatch));
+    dispatch(getRecipes());
+    window.location.reload();
   }
 
   return (
-
     <div className={style.container}>
       <div>
         <NavBar />
         <div>
-
-        <div className={style.filtrado}>
-        <Filters 
-          setCurrentPage={setCurrentPage} 
-          setOrder={setOrder} />
-        </div>
+          <div className={style.filtrado}>
+            <Filters setCurrentPage={setCurrentPage} setOrder={setOrder} />
+          </div>
           <div className={style.filtrado2}>
-            <button onClick={(e) => handleResert(e)}
-            className={style.box}
-            >
+            <button onClick={(e) => handleResert(e)} className={style.box}>
               Clear Filters
             </button>
           </div>
-      
 
-      <Paginado
-        paginado={paginado}
-        allRecipes={recipes.length}
-        recipesPerPage={recipesPerPage}
-      />
+          <Paginado
+            paginado={paginado}
+            allRecipes={recipes.length}
+            recipesPerPage={recipesPerPage}
+          />
 
-      <div className={style.cards}>
-        {allRecipes?.map((e) => {
-          return (
-            <div key={e.id}>
-              <Card
-                key={e.id}
-                id={e.id}
-                image={e.image}
-                name={e.name}
-                diets={e.diets}
-                
-              />
-            </div>
-          );
-        })}
+
+          <div className={style.cards}>
+            {allRecipes?.map((e) => {
+              return (
+                <div key={e.id}>
+                  <Card
+                    key={e.id}
+                    id={e.id}
+                    image={e.image}
+                    name={e.name}
+                    diets={e.diets}
+                    health_score={e.health_score}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-    </div>
-
   );
 }
